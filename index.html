@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>title</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/iconfont/iconfont.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <style>
+    .main-container {
+      padding-top: 80px;
+      overflow-x: hidden;
+    }
+
+    .banner-swiper-container {
+      height: 800px;
+      --swiper-theme-color: #ccc;
+      /* 设置Swiper风格 */
+      --swiper-navigation-color: #fff;
+      /* 单独设置按钮颜色 */
+      /* --swiper-navigation-size: 30px; */
+      /* 设置按钮大小 */
+    }
+
+    .banner-swiper-container .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .banner-swiper-container .swiper-slide .box {
+      width: 1200px;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .banner-swiper-container .slider-1 .text-container {
+      display: inline-flex;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 30px;
+      position: absolute;
+    }
+
+    .banner-swiper-container .slider-1 .text-container .border {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      border: 1px solid rgba(255, 255, 255, .4);
+      border-right: none;
+    }
+
+    .banner-swiper-container .slider-1 .text-container .content {}
+
+    .banner-swiper-container .slider-1 .text-container .content .t1 {
+      color: #fff;
+      display: inline-block;
+      font-family: Gilroy-Regular;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, .4);
+    }
+
+    .banner-swiper-container .slider-1 .text-container .content .t2,
+    .banner-swiper-container .slider-1 .text-container .content .t3 {
+      color: #d05557;
+      font-size: 60px;
+      font-family: Gilroy-ExtraBold;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .banner-swiper-container .slider-1 .text-container .content .t2 {
+      margin-bottom: 0;
+    }
+
+    .banner-swiper-container .slider-1 .text-container .content .t4 {
+      color: #fff;
+      font-size: 40px;
+    }
+
+    .banner-swiper-container .slider-2 .text-container {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .banner-swiper-container .slider-2 .text-container .t1 {
+      text-shadow: 10px 10px 40px rgba(0, 0, 0, .3);
+      color: #fff;
+      font-size: 60px;
+      font-weight: lighter;
+    }
+
+    .banner-swiper-container .slider-2 .text-container .t2 {
+      margin-top: 30px;
+      width: 400px;
+      color: #f4f4f4;
+      line-height: 2;
+    }
+
+    .title-block {
+      text-align: center;
+    }
+
+    .title-block .main-title {
+      font-size: 30px;
+      z-index: 2;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .title-block .main-title-en {
+      font-size: 50px;
+      font-style: italic;
+      /* color: #f4f4f4; */
+      color: rgb(226, 135, 136, .1);
+      position: relative;
+      top: -40px;
+      font-family: Gilroy-ExtraBold;
+    }
+
+    .title-block .sub-title {
+      font-size: 20px;
+      font-weight: lighter;
+      color: rgb(132, 143, 155);
+      margin-top: -20px;
+    }
+
+    .title-block.dark {
+      /* color: #fff; */
+    }
+
+    .title-block.dark .main-title-en {
+      /* color: #e4e4e4; */
+      color: rgb(226, 135, 136, .1);
+    }
+
+    .block {}
+
+    .block .block-box {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 80px 0;
+    }
+
+    .a .a-1 {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 140px;
+    }
+
+    .a .a-1 .item {
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .a .a-1 .item .img {
+      width: 100%;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center;
+    }
+
+    .a .a-1 .item .t1 {
+      margin-top: 20px;
+    }
+
+    .a .a-1 .item .t2 {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #aaa;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .b {
+      background: #f4f4f4;
+    }
+
+    .b .block-box {
+      display: flex;
+    }
+
+    .b-left {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .b-left .t1 {
+      line-height: 1.5;
+      margin-top: 40px;
+      color: #888;
+    }
+
+    .b-right {
+      flex: 1;
+      /* height: 500px; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 80px;
+    }
+
+    .b-right .item-box {
+      width: 50%;
+      height: 200px;
+      padding: 20px;
+    }
+
+    .b-right .item-box .item {
+      /* border: 1px solid #aaa; */
+      box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      justify-content: space-around;
+      background: #fefefe;
+    }
+
+    .b-right .item-box:first-of-type {
+      transform: scale(1.3) translate(0, -10px);
+    }
+
+    .b-right .item-box:first-of-type .item {
+      background: linear-gradient(45deg, #a94041, #de5d5f);
+      color: #f4f4f4;
+    }
+
+    .b-right .item-box:first-of-type .item .iconfont {
+      /* color: #f4b083; */
+      color: #d88a8b;
+    }
+
+    .b-right .item-box:first-of-type .item .num {
+      color: #f4f4f4;
+    }
+
+    .b-right .item-box .item .iconfont {
+      font-size: 60px;
+      color: #efadae;
+    }
+
+    .b-right .item-box .item .num {
+      font-family: Gilroy-ExtraBold;
+      font-size: 36px;
+      color: #de5d5f;
+    }
+
+    .b-right .item-box .item .text {
+      margin-top: 10px;
+    }
+
+    .c .block-box {
+      display: flex;
+    }
+
+    .c-left {
+      flex: 1;
+      /* height: 500px; */
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      /* justify-content: space-between; */
+      /* margin-right: 80px; */
+    }
+
+    .c-left .item-left,
+    .c-left .item-right {
+      /* width: 240px; */
+      /* height: 300px; */
+      /* border: 1px solid; */
+      padding: 20px;
+    }
+
+    .c-left .item-middle {
+      /* width: 240px; */
+      /* height: 600px; */
+      /* border: 1px solid; */
+    }
+
+    .c-left .item {
+      width: 220px;
+      height: 300px;
+
+      box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+      border-radius: 10px 10px 0 0;
+      /* height: 100%; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* align-items: center; */
+      padding: 50px 20px;
+      /* justify-content: space-around; */
+      background: #fff;
+      text-align: center;
+      /* border-bottom: 4px solid #ff6537; */
+      border-bottom: 4px solid #e28788;
+      background: #fefefe;
+    }
+
+    .c-left .item-middle .item {
+      margin-bottom: 20px;
+    }
+
+    .c-left .item-middle .item:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .c-left .item .t1 {
+      color: #e28788;
+      font-family: Gilroy-ExtraBold;
+      font-size: 30px;
+    }
+
+    .c-left .item .t2 {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    .c-left .item .t3 {
+      margin-top: 20px;
+      line-height: 1.5;
+      color: #888;
+    }
+
+    /* .c-left .item-right {
+      width: 200px;
+      height: 300px;
+    } */
+
+    .c-right {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .c-right .t1 {
+      line-height: 1.5;
+      margin-top: 40px;
+      color: #888;
+    }
+
+    .d {
+      background: #f4f4f4;
+    }
+
+    .d-1 {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 100px;
+    }
+
+    .d-1 .item-box {
+      width: 50%;
+      height: 400px;
+      padding: 20px;
+    }
+
+    .d-1 .item-box .item {
+      /* border: 1px solid; */
+      height: 100%;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div id="header"></div>
+    <div class="banner-swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slider-1" style="background-image:url('image/banner/1.jpg');">
+          <div class="box">
+            <div class="text-container">
+              <div class="border"></div>
+              <div class="content">
+                <div class="t1">FREE SHARING</div>
+                <div class="t2">INTERNET PLUS</div>
+                <div class="t3">TIME</div>
+                <div class="t4">互联网 + 时代把握机会</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slider-2" style="background-image:url('image/banner/2.jpg');">
+          <div class="box">
+            <div class="text-container">
+              <div class="t1">网络定制开发</div>
+              <div class="t2">我们专心地位每位客户提供更好的服务，
+                用专业与勤劳为一个个客户带去品牌的传播和销量的提升。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="block a">
+      <div class="block-box">
+        <div class="title-block">
+          <div class="main-title">优质的服务</div>
+          <div class="main-title-en">QUALITY SERVICE</div>
+          <div class="sub-title">我们为您提供各行各业网站解决方案</div>
+        </div>
+        <div class="a-1">
+          <div class="item">
+            <div class="img" style="background-image: url('image/f-1.png');"></div>
+            <div class="t1">品牌网站定制</div>
+            <div class="t2">从品牌高度，品牌VI系统延展整合到品牌网站设计的视觉效果与交互中</div>
+          </div>
+          <div class="item">
+            <div class="img" style="background-image: url('image/f-2.png');"></div>
+            <div class="t1">电商网站定制</div>
+            <div class="t2">为企业商家打造符合业务发展需要的电商整体解决方案服务</div>
+          </div>
+          <div class="item">
+            <div class="img" style="background-image: url('image/f-3.png');"></div>
+            <div class="t1">小程序定制</div>
+            <div class="t2">跨平台、流量大、占地小等优势，打造符合业务发展的小程序设计</div>
+          </div>
+          <div class="item">
+            <div class="img" style="background-image: url('image/f-4.png');"></div>
+            <div class="t1">APP开发</div>
+            <div class="t2">我们以高品质设计创造商业价值，为企业商家定制APP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block b">
+      <div class="block-box">
+        <div class="b-left">
+          <div class="title-block dark left">
+            <div class="main-title">十年技术积累</div>
+            <div class="main-title-en">TECHNOLOGY</div>
+            <div class="sub-title">用数据见证我们的点滴成长</div>
+          </div>
+          <div class="t1">我们专心、细心地位每位客户提供更好的服务，用专业与勤劳为一个个客户带去了品牌的传播，销量的提升。企业所需要的不是今天销量，而是持续性的品牌竞争力。</div>
+        </div>
+
+        <div class="b-right">
+          <div class="item-box">
+            <div class="item">
+              <i class="iconfont icon-kehu2"></i>
+              <div class="item-rigth">
+                <div class="num">100+</div>
+                <div class="text">企业客户的选择</div>
+              </div>
+            </div>
+          </div>
+          <div class="item-box">
+            <div class="item">
+              <i class="iconfont icon-jiangbei2"></i>
+              <div class="item-rigth">
+                <div class="num">100+</div>
+                <div class="text">覆盖行业</div>
+              </div>
+            </div>
+          </div>
+          <div class="item-box">
+            <div class="item">
+              <i class="iconfont icon-dianzan"></i>
+              <div class="item-rigth">
+                <div class="num">99%</div>
+                <div class="text">用户口碑好评</div>
+              </div>
+            </div>
+          </div>
+          <div class="item-box">
+            <div class="item">
+              <i class="iconfont icon-fangan"></i>
+              <div class="item-rigth">
+                <div class="num">50+</div>
+                <div class="text">行业解决方案</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block c">
+      <div class="block-box">
+        <div class="c-left">
+          <div class="item-left">
+            <div class="item">
+              <div class="t1">TEAM</div>
+              <div class="t2">团队</div>
+              <div class="t3">开发队伍、产品经理、设计师、文案策划</div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <div class="item">
+              <div class="t1">PROFESSION</div>
+              <div class="t2">技术</div>
+              <div class="t3">数据库开发、后台开发、APP开发、Web开发</div>
+            </div>
+            <div class="item">
+              <div class="t1">SERVICE</div>
+              <div class="t2">服务</div>
+              <div class="t3">策划推广、产品运维、长期售后、测试培训</div>
+            </div>
+          </div>
+          <div class="item-right">
+            <div class="item">
+              <div class="t1">PRICE</div>
+              <div class="t2">价格</div>
+              <div class="t3">价格透明、拒绝虚高、物超所值、专注品质</div>
+            </div>
+          </div>
+        </div>
+        <div class="c-right">
+          <div class="title-block left">
+            <div class="main-title">我们的优势</div>
+            <div class="main-title-en">ADVANTAGE</div>
+            <div class="sub-title">用心经营，我们坚信品牌的力量</div>
+          </div>
+          <div class="t1">专注品牌事业八年，是一家兼具国际视野、创新动力、全方位跨平台的品牌咨询与设计整合服务公司。公司业务涉及物联网、智能多媒体云计算等。</div>
+        </div>
+      </div>
+    </div>
+    <div class="block d">
+      <div class="block-box">
+        <div class="title-block dark">
+          <div class="main-title">经典案例</div>
+          <div class="main-title-en">CLASSIC CASE</div>
+          <div class="sub-title">选择我们让企业营销更简单</div>
+        </div>
+        <div class="d-1">
+          <div class="item-box">
+            <div class="item"></div>
+          </div>
+          <div class="item-box">
+            <div class="item"></div>
+          </div>
+          <div class="item-box">
+            <div class="item"></div>
+          </div>
+          <div class="item-box">
+            <div class="item"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+</body>
+<script>
+  $(function () {
+    $('#header').load('html/header.html')
+    $('#footer').load('html/footer.html')
+    var mySwiper = new Swiper('.banner-swiper-container', {
+      speed: 1000,
+      autoplay: {
+        delay: 5000
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+  })
+</script>
+
+</html>

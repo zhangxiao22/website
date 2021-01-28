@@ -1,0 +1,29 @@
+@import "/fonts/Gilroy-ExtraBold/Gilroy-ExtraBold.css";
+@import "/fonts/Gilroy-Regular/style2.css";
+
+html, body {
+    color: #444;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: PingFang SC, Microsoft YaHei, "sans-serif";
+}
+
+.abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.elip {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

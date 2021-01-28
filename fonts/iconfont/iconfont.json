@@ -1,0 +1,37 @@
+{
+  "id": "2332845",
+  "name": "官网",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "637009",
+      "name": "客户",
+      "font_class": "kxbcustomers",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "6981573",
+      "name": "客户",
+      "font_class": "kehu1",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "18762662",
+      "name": "客户",
+      "font_class": "kehu2",
+      "unicode": "edc0",
+      "unicode_decimal": 60864
+    },
+    {
+      "icon_id": "7697499",
+      "name": "客户",
+      "font_class": "kehu",
+      "unicode": "e7a1",
+      "unicode_decimal": 59297
+    }
+  ]
+}

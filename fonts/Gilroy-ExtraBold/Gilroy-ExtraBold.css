@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url("Gilroy-ExtraBold.woff2") format("woff2"),
+       url("Gilroy-ExtraBold.woff") format("woff"),
+       url("Gilroy-ExtraBold.ttf") format("truetype"),
+       url("Gilroy-ExtraBold.eot") format("embedded-opentype"),
+       url("Gilroy-ExtraBold.svg") format("svg"),
+       url("Gilroy-ExtraBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
